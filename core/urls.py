@@ -1,7 +1,7 @@
 from rest_framework import routers
 
-from .views import StreakViewSet
+from .views import DayStreakGoalViewSet
 
 router = routers.SimpleRouter()
-router.register(r'streaks', StreakViewSet)
+router.register(r"DayStreakGoals", DayStreakGoalViewSet)
 urlpatterns = router.urls

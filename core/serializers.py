@@ -1,13 +1,14 @@
 from rest_framework import serializers
 
-from .models import Streak
-from .publishing import PublishStatus
+from .models import DayStreakGoal
+from .field_choices import PublishStatusChoices
 
-class StreakSerializer(serializers.ModelSerializer):
 
-    published = serializers.ChoiceField(choices=PublishStatus.list())
+class DayStreakGoalSerializer(serializers.ModelSerializer):
+
+    published = serializers.ChoiceField(choices=PublishStatusChoices.choices)
 
     class Meta:
-        model = Streak
-        fields = ['id', 'name', 'description', 'days_engaged', 'published']
-        read_only_fields = ['id']
+        model = DayStreakGoal
+        fields = ["id", "name", "description", "days_engaged", "published"]
+        read_only_fields = ["id"]
