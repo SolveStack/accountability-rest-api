@@ -8,20 +8,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Streak',
+            name="Streak",
             fields=[
-                ('id', shortuuidfield.fields.ShortUUIDField(blank=True, editable=False, max_length=22, primary_key=True, serialize=False)),
-                ('name', models.CharField(max_length=80)),
-                ('description', models.CharField(max_length=256)),
-                ('days_engaged', models.IntegerField()),
+                (
+                    "id",
+                    shortuuidfield.fields.ShortUUIDField(
+                        blank=True,
+                        editable=False,
+                        max_length=22,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("name", models.CharField(max_length=80)),
+                ("description", models.CharField(max_length=256)),
+                ("days_engaged", models.IntegerField()),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]
