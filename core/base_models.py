@@ -3,7 +3,6 @@ from shortuuidfield import ShortUUIDField
 
 
 class AuditTrailModel(models.Model):
-    id = ShortUUIDField(primary_key=True, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
     created_by = ShortUUIDField(blank=True, null=True)

@@ -125,5 +125,8 @@ Scripts/
 .dmypy.json
 dmypy.json
 
-# Peerlogic repo secrets
+# Solvestack repo secrets
 .credentials
+
+# SQLite
+db.sqlite3
